@@ -3,7 +3,7 @@ Gunicorn
 Pillow
 pandas
 pytesseract
-cv2
+opencv-python
 numpy
 re
 io
