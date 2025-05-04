@@ -14,6 +14,11 @@ app.secret_key = 'ikolr'
 UPLOAD_FOLDER = '/tmp/uploads'
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
+@app.route("/debug-tesseract")
+def debug_tesseract():
+    tesseract_path = shutil.which("tesseract")
+    return f"Tesseract found at: {tesseract_path or 'Not found'}"
+
 # Configure Tesseract
 pytesseract.pytesseract.tesseract_cmd = "/usr/bin/tesseract"
 if not shutil.which("tesseract"):
