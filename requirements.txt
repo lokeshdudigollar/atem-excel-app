@@ -2,7 +2,6 @@ Flask
 Gunicorn
 Pillow
 pandas
-tesseract-ocr
 pytesseract
 opencv-python
 numpy
