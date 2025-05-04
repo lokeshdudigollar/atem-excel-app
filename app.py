@@ -16,8 +16,8 @@ os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
 @app.route("/debug-tesseract")
 def debug_tesseract():
-    
-    return f"Tesseract found at: {which('tesseract') or 'Not found'}"
+    path = which('tesseract')
+    return f"Tesseract found at: {path or 'Not found'}"
 
 # Configure Tesseract
 pytesseract.pytesseract.tesseract_cmd = "/usr/bin/tesseract"
