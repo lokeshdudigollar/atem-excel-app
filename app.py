@@ -7,6 +7,7 @@ import cv2
 import numpy as np
 import re
 from io import BytesIO
+import shutil
 
 app = Flask(__name__)
 app.secret_key = 'ikolr'
@@ -14,7 +15,9 @@ UPLOAD_FOLDER = '/tmp/uploads'
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
 # Configure Tesseract
-
+# Confirm Tesseract is installed
+if not shutil.which("tesseract"):
+    raise RuntimeError("Tesseract is not installed or not found in PATH.")
 
 # Expected fields
 expected_fields = [
