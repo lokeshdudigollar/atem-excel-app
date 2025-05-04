@@ -21,8 +21,6 @@ def debug_tesseract():
 
 # Configure Tesseract
 pytesseract.pytesseract.tesseract_cmd = "/usr/bin/tesseract"
-if not shutil.which("tesseract"):
-    print("Tesseract is not loaded...")
 
 # Expected fields
 expected_fields = [
