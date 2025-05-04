@@ -5,4 +5,3 @@ pandas
 pytesseract
 opencv-python
 numpy
-shutil
