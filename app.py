@@ -7,7 +7,7 @@ import cv2
 import numpy as np
 import re
 from io import BytesIO
-#import shutil
+from shutil import which
 
 app = Flask(__name__)
 app.secret_key = 'ikolr'
@@ -16,7 +16,7 @@ os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
 @app.route("/debug-tesseract")
 def debug_tesseract():
-    from shutil import which
+    
     return f"Tesseract found at: {which('tesseract') or 'Not found'}"
 
 # Configure Tesseract
