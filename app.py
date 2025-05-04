@@ -17,7 +17,7 @@ os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 # Configure Tesseract
 # Confirm Tesseract is installed
 if not shutil.which("tesseract"):
-    raise RuntimeError("Tesseract is not installed or not found in PATH.")
+    print("Tesseract is not installed or not found in PATH.")
 
 # Expected fields
 expected_fields = [
