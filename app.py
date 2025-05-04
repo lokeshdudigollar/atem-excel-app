@@ -15,9 +15,9 @@ UPLOAD_FOLDER = '/tmp/uploads'
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
 # Configure Tesseract
-# Confirm Tesseract is installed
+pytesseract.pytesseract.tesseract_cmd = "/usr/bin/tesseract"
 if not shutil.which("tesseract"):
-    print("Tesseract is not installed or not found in PATH.")
+    print("Tesseract is not loaded...")
 
 # Expected fields
 expected_fields = [
